@@ -1,0 +1,130 @@
+.about-hero {
+  background: linear-gradient(rgba(10, 5, 20, 0.8), rgba(2, 6, 23, 0.95)), url('/assets/images/Structural_Engineering.svg') center/cover no-repeat;
+  color: #ffffff;
+  padding: 8rem 0 8rem;
+}
+
+.hero-pill {
+  display: inline-flex;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(148, 163, 184, 0.15);
+  color: #e5e7eb;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.text-purple {
+  color: #a855f7 !important;
+}
+
+.about-hero .hero-title {
+  font-size: clamp(2.5rem, 4vw + 1.5rem, 4rem);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.about-hero .hero-subtitle {
+  color: #cbd5e1;
+  max-width: 36rem;
+  font-size: 1.1rem;
+}
+
+.about-body {
+  background: #111115;
+  color: #e5e7eb;
+  padding: 5rem 0 3rem;
+}
+
+.about-body .section-title, .team-section .section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #f9fafb;
+  margin-bottom: 1.5rem;
+}
+
+.about-body p, .team-section p {
+  color: #9ca3af;
+  line-height: 1.7;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  font-weight: 600;
+  display: block;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+}
+
+.about-side-image-wrapper {
+  overflow: hidden;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.title-underline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #a855f7;
+  border-radius: 2px;
+}
+
+.mission-card {
+  background: #1a1a24;
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.mission-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  background: rgba(168, 85, 247, 0.1);
+  border-radius: 12px;
+}
+
+.mission-card h5 {
+  font-size: 1.25rem;
+  color: #f9fafb;
+  font-weight: 600;
+}
+
+.team-section {
+  background: #111115;
+  padding: 0 0 5rem;
+  color: #e5e7eb;
+}
+
+.team-card {
+  height: 400px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.team-img-main {
+  height: 100%;
+  object-position: center top;
+}
+
+.team-overlay {
+  background: linear-gradient(to top, rgba(10, 5, 20, 0.95) 0%, rgba(10, 5, 20, 0.6) 50%, transparent 100%);
+}
+

@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global layout and theme */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #020617;
+}
+
+.app-main {
+  flex: 1 0 auto;
+}
+
+app-footer {
+  flex-shrink: 0;
+}
+
+/* Utility */
+.btn-gradient {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  border: none;
+  color: #ffffff;
+}
+
+.btn-gradient:hover {
+  opacity: 0.9;
+  color: #ffffff;
+}

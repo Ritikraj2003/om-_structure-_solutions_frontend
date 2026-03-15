@@ -1,0 +1,68 @@
+:host {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  display: block;
+}
+
+.main-header {
+  background: #140922;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.brand-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.brand-title {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.logo {
+  width: 75px;
+  height: auto;
+}
+
+.brand-subtitle {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  padding-inline: 1.5rem;
+}
+
+.btn-gradient:hover {
+  opacity: 0.9;
+  color: #ffffff;
+}
