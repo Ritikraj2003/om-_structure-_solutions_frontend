@@ -1,8 +1,46 @@
 .site-footer {
-  background: #0b0712;
+  position: relative;
+  background-image: url('../../../../public/assets/images/frame-1.svg');
+  background-size: cover;
+  background-position: center;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding: 3rem 0 1.5rem;
   color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .site-footer {
+     background-image: url('/assets/images/frame-1.svg');
+  }
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to right, rgba(16, 8, 32, 0.95) 0%, rgba(30, 15, 60, 0.88) 100%);
+  z-index: -1;
+}
+
+.text-purple {
+  color: #a855f7 !important;
+}
+
+.custom-bullets li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.custom-bullets li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #a855f7;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .footer-brand .brand-logo {

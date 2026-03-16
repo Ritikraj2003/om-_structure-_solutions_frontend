@@ -20,6 +20,16 @@ export const routes: Routes = [
     title: 'OM Structures – Blog',
   },
   {
+    path: 'careers',
+    loadComponent: () => import('./modules/pages/careers/careers.component').then(m => m.CareersComponent),
+    title: 'OM Structures – Careers',
+  },
+  {
+    path: 'services',
+    loadComponent: () => import('./modules/pages/services/services.component').then(m => m.ServicesComponent),
+    title: 'OM Structures – Services',
+  },
+  {
     path: '**',
     redirectTo: '',
   },
