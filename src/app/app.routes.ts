@@ -21,8 +21,13 @@ export const routes: Routes = [
   },
   {
     path: 'careers',
-    loadComponent: () => import('./modules/pages/careers/careers.component').then(m => m.CareersComponent),
+    loadComponent: () => import('./modules/pages/career-home/career-home.component').then(m => m.CareerHomeComponent),
     title: 'OM Structures – Careers',
+  },
+  {
+    path: 'careers/apply',
+    loadComponent: () => import('./modules/pages/careers/careers.component').then(m => m.CareersComponent),
+    title: 'OM Structures – Apply',
   },
   {
     path: 'services',

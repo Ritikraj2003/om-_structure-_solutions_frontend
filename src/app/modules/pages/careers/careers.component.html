@@ -72,42 +72,50 @@
         <h3 class="apply-title mb-2 text-white fw-bold fs-4">Apply Now</h3>
         <p class="apply-subtitle text-white-50 mb-4 fs-7">Tell us about yourself and upload your latest resume to get started.</p>
         
-        <form>
+        <form (ngSubmit)="onSubmit()">
           <div class="row g-4 mb-4">
             <div class="col-md-6">
               <label class="form-label text-white fw-medium fs-7">Full Name</label>
-              <input type="text" class="form-control custom-input" placeholder="John Doe">
+              <input type="text" class="form-control custom-input" name="fullName" [(ngModel)]="formData.fullName" placeholder="John Doe">
             </div>
             <div class="col-md-6">
               <label class="form-label text-white fw-medium fs-7">Email Address</label>
-              <input type="email" class="form-control custom-input" placeholder="john@example.com">
+              <input type="email" class="form-control custom-input" name="email" [(ngModel)]="formData.email" placeholder="john@example.com">
             </div>
           </div>
           
           <div class="mb-4">
             <label class="form-label text-white fw-medium fs-7">Position of Interest</label>
-            <select class="form-select custom-select">
-              <option selected>Structural Engineer</option>
-              <option value="1">Architect</option>
-              <option value="2">Project Manager</option>
-              <option value="3">Other</option>
+            <select class="form-select custom-select" name="position" [(ngModel)]="formData.position">
+              <option value="Structural Engineer">Structural Engineer</option>
+              <option value="Architect">Architect</option>
+              <option value="Project Manager">Project Manager</option>
+              <option value="Other">Other</option>
             </select>
           </div>
 
           <div class="mb-4">
             <label class="form-label text-white fw-medium fs-7">Message / Cover Letter (Optional)</label>
-            <textarea class="form-control custom-input" rows="4" placeholder="Briefly describe your experience..."></textarea>
+            <textarea class="form-control custom-input" rows="4" name="message" [(ngModel)]="formData.message" placeholder="Briefly describe your experience..."></textarea>
           </div>
 
           <div class="mb-4">
-            <label class="form-label text-white fw-medium fs-7">Upload Resume (PDF, DOCX)</label>
-            <div class="upload-area text-center py-5 rounded-3">
+            <label class="form-label text-white fw-medium fs-7">Upload Resume (PDF, DOCX, Image)</label>
+            
+            <!-- Hidden file input -->
+            <input type="file" #fileInput class="d-none" accept=".pdf,.doc,.docx,image/*" (change)="onFileSelected($event)">
+            
+            <!-- Clickable upload area -->
+            <div class="upload-area text-center py-5 rounded-3" (click)="fileInput.click()" style="cursor: pointer;">
                <svg class="mb-3" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                  <polyline points="17 8 12 3 7 8"></polyline>
                  <line x1="12" y1="3" x2="12" y2="15"></line>
                </svg>
-               <p class="mb-0 text-white-50 fs-7">Click to browse or drag and drop your file here</p>
+               <p class="mb-0 text-white-50 fs-7" *ngIf="!selectedFile">Click to browse or drag and drop your file here</p>
+               <p class="mb-0 text-white fs-6 fw-bold text-success" *ngIf="selectedFile">
+                  <i class="bi bi-file-earmark-check me-2"></i>{{ selectedFile.name }}
+               </p>
             </div>
           </div>
 

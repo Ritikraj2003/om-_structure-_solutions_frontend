@@ -1,0 +1,114 @@
+/* Career Home Styles */
+
+.career-hero {
+    position: relative;
+    padding: 120px 0;
+    background-color: #2a3a4c; /* Fallback */
+    background-image: url('/assets/images/Hero_Section.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.career-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.career-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--bs-primary, #fd7e14);
+}
+
+.text-primary {
+    color: var(--bs-primary, #fd7e14) !important;
+}
+
+.bg-primary {
+    background-color: var(--bs-primary, #fd7e14) !important;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary, #fd7e14);
+    border-color: var(--bs-primary, #fd7e14);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #e66b0e;
+    border-color: #e66b0e;
+}
+
+.info-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.05)!important;
+}
+
+/* Placeholders for images */
+.mission-img {
+    height: 400px;
+    background-color: #eee;
+    background-image: url('/assets/images/Structural_Engineering.svg'); /* Adjust path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(253, 126, 20, 0.15); /* Primary color shadow glow effect */
+}
+
+.mission-img-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    bottom: -15px;
+    left: -15px;
+    border-radius: 12px;
+    background: radial-gradient(circle at center, rgba(253, 126, 20, 0.1) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.cta-img {
+    height: 350px;
+    background-color: #333;
+    background-image: url('/assets/images/Image.svg'); /* Adjust path */
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-list i {
+    color: var(--bs-primary, #fd7e14);
+}
+
+/* Custom icon fonts if bootstrap-icons isn't available */
+i.bi {
+    font-style: normal;
+}
